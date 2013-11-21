@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Sistema de Gestão de Estacionamento</title>
+</h:head>
+
+<h:body>
+	<h:outputText value="Sistema Gestac - Registro de Entrada de Veículo" />
+
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Placas:" for="placa" />
+			<h:inputText value="#{fronteiraRegistrarVeiculo.bean.veiculo.placas}"
+				id="placa" />
+
+			<h:outputLabel value="Marca:" for="marca" />
+			<h:inputText value="#{fronteiraRegistrarVeiculo.bean.veiculo.marca}"
+				id="marca" />
+
+			<h:outputLabel value="Modelo:" for="modelo" />
+			<h:inputText value="#{fronteiraRegistrarVeiculo.bean.veiculo.modelo}"
+				id="modelo" />
+
+			<h:outputLabel value="Cor:" for="cor" />
+			<h:inputText value="#{fronteiraRegistrarVeiculo.bean.veiculo.cor}"
+				id="cor" />
+
+			<h:outputLabel value="Tipo de Veículo:" for="tipo" />
+			<h:inputText value="#{fronteiraRegistrarVeiculo.bean.tipoVeiculo}"
+				readonly="true" id="tipo" />
+
+			<h:commandButton value="Registrar"
+				action="#{fronteiraRegistrarVeiculo.registrarVeiculo}" />
+		</h:panelGrid>
+	</h:form>
+
+
+</h:body>
+
+</html>
