@@ -1,13 +1,12 @@
 package br.com.gestac.modelo.veiculo;
 
-import br.com.gestac.modelo.funcionario.Funcionario;
-
 public class Veiculo {
 
 	private String placas;
 	private String marca;
 	private String modelo;
 	private String cor;
+
 	public String getPlacas() {
 		return placas;
 	}
@@ -39,7 +38,5 @@ public class Veiculo {
 	public void setCor(String cor) {
 		this.cor = cor;
 	}
-
-
 
 }
