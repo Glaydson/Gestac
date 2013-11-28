@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Sistema de Gestão de Estacionamento</title>
+</h:head>
+
+<h:body>
+	<h:outputText value="Sistema Gestac - Lista de Veículos" />
+	<h:dataTable value="#{fronteiraRegistrarVeiculo.beanVeiculos.veiculos}"
+		var="veiculo" border="1">
+
+		<h:column>
+			<f:facet name="header">Placas</f:facet>
+			#{veiculo.placas}
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">Marca</f:facet>
+			#{veiculo.marca}
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">Modelo</f:facet>
+			#{veiculo.modelo}
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">Cor</f:facet>
+			#{veiculo.cor}
+		</h:column>
+
+	</h:dataTable>
+
+	<br />
+	<h:link outcome="principal" value="Voltar para o Menu Principal" />
+</h:body>
+
+</html>
