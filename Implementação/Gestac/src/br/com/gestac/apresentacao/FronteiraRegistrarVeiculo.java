@@ -1,7 +1,10 @@
 package br.com.gestac.apresentacao;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
+import javax.faces.view.facelets.FaceletContext;
 
 import br.com.gestac.modelo.usuario.TipoUsuario;
 import br.com.gestac.modelo.usuario.UsuarioBean;
@@ -29,8 +32,8 @@ public class FronteiraRegistrarVeiculo {
 		try {
 			return beanVeiculos.registrarVeiculo();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			FacesMessage mensagem = new FacesMessage(e.getMessage());
+			FacesContext.getCurrentInstance().addMessage(null, mensagem);
 		}
 		return null;
 	}

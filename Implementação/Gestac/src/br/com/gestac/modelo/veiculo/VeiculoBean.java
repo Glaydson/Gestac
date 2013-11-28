@@ -92,6 +92,12 @@ public class VeiculoBean {
 
 	private void validar() throws Exception {
 		List<String> erros = new ArrayList<String>();
+		if (veiculo.getPlacas() == null || veiculo.getPlacas().equals(BRANCO)) {
+			erros.add("Placa não preenchida");
+		}
+		if (veiculo.getModelo() == null || veiculo.getModelo().equals(BRANCO)) {
+			erros.add("Modelo não preenchido");
+		}
 		if (veiculo.getCor() == null || veiculo.getCor().equals(BRANCO)) {
 			erros.add("Cor não preenchida");
 		}

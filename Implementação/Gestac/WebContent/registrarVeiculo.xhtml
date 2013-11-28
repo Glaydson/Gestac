@@ -9,25 +9,30 @@
 </h:head>
 
 <h:body>
+
+	
+	
 	<h:outputText value="Sistema Gestac - Registro de Entrada de Veículo" />
 
+	<h:messages/>
+	
 	<h:form>
 		<h:panelGrid columns="2">
 			<h:outputLabel value="Placas:" for="placa" />
 			<h:inputText value="#{fronteiraRegistrarVeiculo.beanVeiculos.veiculo.placas}"
-				id="placa" />
+				id="placa" required="true" requiredMessage="Placa é obrigatória." />
 
 			<h:outputLabel value="Marca:" for="marca" />
 			<h:inputText value="#{fronteiraRegistrarVeiculo.beanVeiculos.veiculo.marca}"
-				id="marca" />
+				id="marca" required="true" requiredMessage="Marca é obrigatória." />
 
 			<h:outputLabel value="Modelo:" for="modelo" />
 			<h:inputText value="#{fronteiraRegistrarVeiculo.beanVeiculos.veiculo.modelo}"
-				id="modelo" />
+				id="modelo" required="true" requiredMessage="Modelo é obrigatório." />
 
 			<h:outputLabel value="Cor:" for="cor" />
 			<h:inputText value="#{fronteiraRegistrarVeiculo.beanVeiculos.veiculo.cor}"
-				id="cor" />
+				id="cor" required="true" requiredMessage="Cor é obrigatória." />
 
 			<h:outputLabel value="Tipo de Veículo:" for="tipo" />
 			<h:inputText value="#{fronteiraRegistrarVeiculo.beanVeiculos.tipoVeiculo}"
