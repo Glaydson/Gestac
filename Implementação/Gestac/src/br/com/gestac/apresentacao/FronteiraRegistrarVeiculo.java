@@ -13,17 +13,21 @@ import br.com.gestac.util.Util;
 @SessionScoped
 public class FronteiraRegistrarVeiculo {
 
-	private VeiculoBean bean = new VeiculoBean();
-	private UsuarioBean beanUsuario = new UsuarioBean();
+	private VeiculoBean beanVeiculos = new VeiculoBean();
+	private UsuarioBean beanUsuarios = new UsuarioBean();
 
 	public String iniciarRegistrarVeiculo() {
 		String login = Util.obterUsuarioLogado(TipoUsuario.GESTOR);
-		return bean.obterVeiculoInclusao(login);
+		return beanVeiculos.obterVeiculoInclusao(login);
+	}
+
+	public String listarVeiculos() {
+		return beanVeiculos.listarVeiculos();
 	}
 
 	public String registrarVeiculo() {
 		try {
-			return bean.registrarVeiculo();
+			return beanVeiculos.registrarVeiculo();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -31,18 +35,18 @@ public class FronteiraRegistrarVeiculo {
 		return null;
 	}
 
-	public VeiculoBean getBean() {
-		return bean;
+	public VeiculoBean getBeanVeiculos() {
+		return beanVeiculos;
 	}
 
-	public void setBean(VeiculoBean bean) {
-		this.bean = bean;
+	public void setBeanVeiculos(VeiculoBean bean) {
+		this.beanVeiculos = bean;
 	}
 
 	public Veiculo buscarVeiculoPelaPlaca(String placas) {
 		Veiculo v = null;
 		try {
-			v = bean.buscarVeiculoPelaPlaca(placas);
+			v = beanVeiculos.buscarVeiculoPelaPlaca(placas);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

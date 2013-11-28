@@ -21,8 +21,13 @@ public class VeiculoDAO {
 				veiculo = v;
 			}
 		}
-		if (veiculo == null) throw new Exception("Veiculo não encontrado");
+		if (veiculo == null)
+			throw new Exception("Veiculo não encontrado");
 		return veiculo;
+	}
+
+	public static List<Veiculo> buscarVeiculos() {
+		return veiculos;
 	}
 
 }

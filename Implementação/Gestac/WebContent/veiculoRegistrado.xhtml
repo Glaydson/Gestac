@@ -13,9 +13,11 @@
 	<br></br>
 	<h:outputFormat
 		value="O veículo de placas {0} do tipo {1} foi registrado com sucesso!">
-		<f:param value="#{fronteiraRegistrarVeiculo.bean.veiculo.placas}" />
-		<f:param value="#{fronteiraRegistrarVeiculo.bean.tipoVeiculo}" />
+		<f:param value="#{fronteiraRegistrarVeiculo.beanVeiculos.veiculo.placas}" />
+		<f:param value="#{fronteiraRegistrarVeiculo.beanVeiculos.tipoVeiculo}" />
 	</h:outputFormat>
+	<br/>
+	<h:link outcome="principal" value="Voltar para o Menu Principal" />
 
 </h:body>
 

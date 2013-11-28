@@ -15,6 +15,7 @@ public class VeiculoBean {
 	private static final String BRANCO = "";
 	private Veiculo veiculo;
 	private String tipoVeiculo;
+	private List<Veiculo> veiculos = new ArrayList<Veiculo>();
 
 	public VeiculoBean() {
 		adicionarVeiculos();
@@ -91,7 +92,7 @@ public class VeiculoBean {
 
 	private void validar() throws Exception {
 		List<String> erros = new ArrayList<String>();
-		if (veiculo.getCor().equals(BRANCO)) {
+		if (veiculo.getCor() == null || veiculo.getCor().equals(BRANCO)) {
 			erros.add("Cor não preenchida");
 		}
 		if (veiculo.getMarca().equals(BRANCO)) {
@@ -132,4 +133,18 @@ public class VeiculoBean {
 		VeiculoDAO.adicionar(veiculo3);
 
 	}
+
+	public String listarVeiculos() {
+		veiculos = VeiculoDAO.buscarVeiculos();
+		return "listarVeiculos";
+	}
+
+	public List<Veiculo> getVeiculos() {
+		return veiculos;
+	}
+
+	public void setVeiculos(List<Veiculo> veiculos) {
+		this.veiculos = veiculos;
+	}
+
 }

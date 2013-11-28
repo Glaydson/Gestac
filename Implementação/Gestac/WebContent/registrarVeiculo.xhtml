@@ -14,23 +14,23 @@
 	<h:form>
 		<h:panelGrid columns="2">
 			<h:outputLabel value="Placas:" for="placa" />
-			<h:inputText value="#{fronteiraRegistrarVeiculo.bean.veiculo.placas}"
+			<h:inputText value="#{fronteiraRegistrarVeiculo.beanVeiculos.veiculo.placas}"
 				id="placa" />
 
 			<h:outputLabel value="Marca:" for="marca" />
-			<h:inputText value="#{fronteiraRegistrarVeiculo.bean.veiculo.marca}"
+			<h:inputText value="#{fronteiraRegistrarVeiculo.beanVeiculos.veiculo.marca}"
 				id="marca" />
 
 			<h:outputLabel value="Modelo:" for="modelo" />
-			<h:inputText value="#{fronteiraRegistrarVeiculo.bean.veiculo.modelo}"
+			<h:inputText value="#{fronteiraRegistrarVeiculo.beanVeiculos.veiculo.modelo}"
 				id="modelo" />
 
 			<h:outputLabel value="Cor:" for="cor" />
-			<h:inputText value="#{fronteiraRegistrarVeiculo.bean.veiculo.cor}"
+			<h:inputText value="#{fronteiraRegistrarVeiculo.beanVeiculos.veiculo.cor}"
 				id="cor" />
 
 			<h:outputLabel value="Tipo de Veículo:" for="tipo" />
-			<h:inputText value="#{fronteiraRegistrarVeiculo.bean.tipoVeiculo}"
+			<h:inputText value="#{fronteiraRegistrarVeiculo.beanVeiculos.tipoVeiculo}"
 				readonly="true" id="tipo" />
 
 			<h:commandButton value="Registrar"

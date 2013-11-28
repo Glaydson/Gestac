@@ -23,7 +23,7 @@ public class TesteRegistrarInclusaoVeiculo {
 		VeiculoBean vBean = new VeiculoBean();
 		vBean.setVeiculo(veiculo);
 		vBean.setTipoVeiculo("Empresa");
-		fronteira.setBean(vBean);
+		fronteira.setBeanVeiculos(vBean);
 
 		// Faz o registro do veículo
 		fronteira.registrarVeiculo();
@@ -44,7 +44,7 @@ public class TesteRegistrarInclusaoVeiculo {
 		VeiculoBean vBean = new VeiculoBean();
 		vBean.setVeiculo(veiculo);
 		vBean.setTipoVeiculo("Empresa");
-		fronteira.setBean(vBean);
+		fronteira.setBeanVeiculos(vBean);
 
 		// Faz o registro do veículo
 		fronteira.registrarVeiculo();
